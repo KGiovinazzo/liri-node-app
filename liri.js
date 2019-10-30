@@ -30,13 +30,20 @@ function searchMusic(songTitle) {
     if (!songTitle) {
         songTitle = "The Sign";
     }
+    spotify.search({ type: 'track', query: songTitle }, function (err, data) {
+        if (err) {
+            return console.log('Error occurred: ' + err);
+        }
 
-    console.log(`\r\n======\r\n
+        console.log(data.tracks.items[0]);
+
+        console.log(`\r\n======\r\n
     Song Title: ${data.tracks.items[0].name} \r\n
     Artist(s): ${data.tracks.items[0].artists[0].name}\r\n
-
-    `)
-
+    Preview Link: ${data.tracks.items[0].href}
+    Song Album: ${data.tracks.items[0].album.name}
+`)
+    });
 
 
 };
