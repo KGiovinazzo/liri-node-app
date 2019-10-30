@@ -8,8 +8,6 @@ var moment = require("moment");
 var userInput = process.argv.slice(3).join(" ");
 var command = process.argv[2];
 
-
-
 switch (command) {
     case "concert-this":
         searchBands(userInput);
@@ -40,11 +38,10 @@ function searchMusic(songTitle) {
         console.log(`\r\n======\r\n
     Song Title: ${data.tracks.items[0].name} \r\n
     Artist(s): ${data.tracks.items[0].artists[0].name}\r\n
-    Preview Link: ${data.tracks.items[0].href}
-    Song Album: ${data.tracks.items[0].album.name}
+    Preview Link: ${data.tracks.items[0].href} \r\n
+    Song Album: ${data.tracks.items[0].album.name}\r\n
 `)
     });
-
 
 };
 
