@@ -14,11 +14,11 @@ This app can take in one of the following commands:
 - do-what-it-says
 
 # Images
-![Concert-Example](/Bootcamp/liri-node-app/Images/concert.png)
+![Concert-Example](/Images/concert.png)
 
-![Music-Example](/Bootcamp/liri-node-app/Images/music.png)
+![Music-Example](/Images/music.png)
 
-![Movie-Example](/Bootcamp/liri-node-app/Images/movies.png)
+![Movie-Example](/Images/movies.png)
 
 ### Technologies Used
 
