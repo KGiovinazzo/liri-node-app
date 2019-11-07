@@ -13,6 +13,8 @@ This app can take in one of the following commands:
 - movie-this
 - do-what-it-says
 
+Once a command is recieved, the terminal will process data according to the input. 
+
 # Images
 ![Concert-Example](/Images/concert.png)
 
