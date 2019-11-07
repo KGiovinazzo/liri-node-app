@@ -1,6 +1,6 @@
 # liri-node-app
 
-# Introduction
+## Introduction
 
 The Liri Node application is similar to iPhone's Siri, but allows users to query movies, songs and concert dates by your favorite artists. 
 
@@ -13,13 +13,13 @@ This app can take in one of the following commands:
 - movie-this
 - do-what-it-says
 
-For Concerts, the terminal will process:
+### For Concerts, the terminal will process:
 
 - Name of the venue
 - Venue location
 - Date of concert (MM/DD/YYYY)
 
-For Spotify, the terminal will process:
+### For Spotify, the terminal will process:
 
 - Name
 - Artist
@@ -28,7 +28,7 @@ For Spotify, the terminal will process:
 
 -- If no song is provided, the terminal will process "The Sign"
 
-For Movies, the terminal will process:
+### For Movies, the terminal will process:
 
 - Movie title
 - Release year
@@ -41,7 +41,7 @@ For Movies, the terminal will process:
 
 -- If no movie is provided, the terminal will process "Mr. Nobody"
 
-# Images
+### Images
 ![Concert-Example](/Images/concert.png)
 
 ![Music-Example](/Images/music.png)
