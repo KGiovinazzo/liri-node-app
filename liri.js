@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+var fs = require("fs")
 var keys = require("./keys.js");
 var Spotify = require("node-spotify-api");
 var spotify = new Spotify(keys.spotify);
@@ -8,20 +9,22 @@ var moment = require("moment");
 var userInput = process.argv.slice(3).join(" ");
 var command = process.argv[2];
 
-switch (command) {
-    case "concert-this":
-        searchBands(userInput);
-        break;
-    case "spotify-this-song":
-        searchMusic(userInput);
-        break;
-    case "movie-this":
-        searchMovie(userInput);
-        break;
-    case "do-what-it-says":
-    //  spotify-this-song,"I Want it That Way"
-}
-
+function searchMe(command, userInput) {
+    switch (command) {
+        case "concert-this":
+            searchBands(userInput);
+            break;
+        case "spotify-this-song":
+            searchMusic(userInput);
+            break;
+        case "movie-this":
+            searchMovie(userInput);
+            break;
+        case "do-what-it-says":
+            getRandom(userInput);
+        //  spotify-this-song,"I Want it That Way"
+    }
+};
 
 
 function searchMusic(songTitle) {
@@ -96,4 +99,19 @@ function searchBands(artist) {
 
         });
 
+};
+
+function getRandom() {
+    fs.readFile('random.txt', "utf8", function (err, data) {
+        if (err) {
+            return console.log(err);
+        } 
+         {
+            console.log(data);
+            var txtData = data.split(",");
+            userInput = txtData[1];
+            searchMe(txtData[0], txtData[1]);
+            console.log(txtData);
+        };
+    });
 };
