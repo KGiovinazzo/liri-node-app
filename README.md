@@ -48,6 +48,8 @@ This app can take in one of the following commands:
 
 ![Movie-Example](/Images/movies.png)
 
+![Random-Example](/Images/randomtxt.png)
+
 ### Technologies Used
 
 * JavaScript
