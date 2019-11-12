@@ -41,6 +41,10 @@ This app can take in one of the following commands:
 
 -- If no movie is provided, the terminal will process "Mr. Nobody"
 
+### For Random, the terminal will process:
+
+"I want it that way" - The Backstreet Boys
+
 ### Images
 ![Concert-Example](/Images/concert.png)
 
