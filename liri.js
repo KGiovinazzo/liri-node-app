@@ -21,7 +21,8 @@ function searchMe(command, userInput) {
             searchMovie(userInput);
             break;
         case "do-what-it-says":
-            getRandom(userInput);
+            getRandom();
+            break;
         //  spotify-this-song,"I Want it That Way"
     }
 };
@@ -36,7 +37,7 @@ function searchMusic(songTitle) {
             return console.log('Error occurred: ' + err);
         }
 
-        console.log(data.tracks.items[0]);
+        // console.log(data.tracks.items[0]);
 
         console.log(`\r\n======\r\n
     Song Title: ${data.tracks.items[0].name} \r\n
@@ -105,13 +106,14 @@ function getRandom() {
     fs.readFile('random.txt', "utf8", function (err, data) {
         if (err) {
             return console.log(err);
-        } 
+        } else
          {
-            console.log(data);
+            // console.log(data);
             var txtData = data.split(",");
-            userInput = txtData[1];
             searchMe(txtData[0], txtData[1]);
-            console.log(txtData);
+            // console.log(txtData);
         };
     });
 };
+
+searchMe(command, userInput);
